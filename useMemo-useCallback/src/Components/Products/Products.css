@@ -1,0 +1,48 @@
+.container{
+    margin: 0 150px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 2rem;
+}
+.item{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px;
+}
+.item img{
+    width: 225px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.item h4{
+    text-transform: capitalize;
+    font-size: 22px;
+}
+.btn button{
+    padding: 8px 15px;
+    margin: 0 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/*.btn button:nth-child(2){
+    background-color: red;
+}
+.btn button:nth-child(2){
+    background-color: blue;
+} */
