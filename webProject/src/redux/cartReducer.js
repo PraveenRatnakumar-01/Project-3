@@ -33,9 +33,18 @@ const cartSlice = createSlice({
             if (item && item.count>1){
                 item.count--
             }
+        },
+        removeFromCart: (state,action)=> {
+            // console.log("Cart Item  Removed", action.payload);
+            const itemId = action.payload;
+            const existingItem = state.cartItems.find(item => item.id === itemId);
+            if (existingItem){
+                state.cartItems = state.cartItems.filter(item => item.id !== itemId);
+                state.cartCount = state.cartItems.length;
+            }
         }
     }
 })
 
-export const {addToCart, incrementCount, decrementCount}= cartSlice.actions;
+export const {addToCart, incrementCount, decrementCount, removeFromCart}= cartSlice.actions;
 export default cartSlice.reducer;

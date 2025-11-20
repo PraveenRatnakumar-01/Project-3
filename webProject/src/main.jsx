@@ -7,6 +7,7 @@ import {store} from './redux/store.js'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CartPage from './components/pages/CartPage.jsx'
 import AboutPage from './components/pages/AboutPage.jsx'
+import DynamicProduct from './components/pages/DynamicProduct.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/' element={<App/>}></Route>
           <Route path='/cart' element={<CartPage/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
+          <Route path='/product/:name' element={<DynamicProduct/>}/>
         </Routes>
       </BrowserRouter>
     </Provider>

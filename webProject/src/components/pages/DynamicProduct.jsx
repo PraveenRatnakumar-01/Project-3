@@ -1,16 +1,17 @@
 import React from 'react'
 import Navbar from '../NavBar/NavBar'
 import { ThemeProvider } from '../../Context/ThemeContext'
+import ProductInfo from '../ProductInfo/ProductInfo'
 import Footer from '../Footer/Footer'
 
-const AboutPage = () => {
+const DynamicProduct = () => {
   return (
-     <ThemeProvider>
+    <ThemeProvider>
         <Navbar/>
-        AboutPage
+        <ProductInfo/>
         <Footer/>
-    </ThemeProvider>   
+    </ThemeProvider>
   )
 }
 
-export default AboutPage
+export default DynamicProduct

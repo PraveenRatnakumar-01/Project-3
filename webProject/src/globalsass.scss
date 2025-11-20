@@ -69,3 +69,13 @@
     @include font-nunito(600);
     text-transform: uppercase;
 }
+
+@mixin Button($backgroundColor: teal){
+    @include font-nunito(600);
+    color: white;
+    background-color: $backgroundColor;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}

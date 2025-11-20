@@ -110,10 +110,18 @@
                     &.total{
                         text-align: right;
                     }
-                    &button{
+                    button{
+                        @include font-nunito;
                         background-color: orange;
+                        color: black;
+                        border: none;
+                        padding: 8px 15px;
                     }
                 }
+                .remove{
+                        cursor: pointer;
+                        font-size: 14px;
+                    }
 
                 &:last-child {
                     border-bottom: none;

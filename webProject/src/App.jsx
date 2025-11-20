@@ -3,6 +3,8 @@ import NavBar from './components/NavBar/NavBar'
 import { ThemeProvider } from './Context/ThemeContext'
 import Hero from './components/Hero/Hero'
 import Trending from './components/Trends/Trending'
+import {Toaster} from 'react-hot-toast'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -111,9 +113,11 @@ const App = () => {
     //   <Hero/>    
     // </div>
     <ThemeProvider>
-      <NavBar />
-      <Hero/>
-      <Trending/>
+      <Toaster position='top-center'/>
+        <NavBar />
+        <Hero/>
+        <Trending/>
+        <Footer/>
     </ThemeProvider>
   )
 }
