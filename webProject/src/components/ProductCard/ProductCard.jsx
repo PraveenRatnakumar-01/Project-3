@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast'
 
-const ProductCard = ({ id, name, image, Offerprice,Actualprice}) => {
+const ProductCard = ({ id, name, image, Offerprice, Actualprice}) => {
     const dispatch= useDispatch()
     const navigate = useNavigate()
 

@@ -3,23 +3,36 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import {Provider} from 'react-redux'
-import {store} from './redux/store.js'
+import {persistor, store} from './redux/store.js'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CartPage from './components/pages/CartPage.jsx'
 import AboutPage from './components/pages/AboutPage.jsx'
 import DynamicProduct from './components/pages/DynamicProduct.jsx'
+import { PersistGate } from 'redux-persist/integration/react'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<App/>}></Route>
           <Route path='/cart' element={<CartPage/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
           <Route path='/product/:name' element={<DynamicProduct/>}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+        <PersistGate persistor={persistor}>
+            <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<App/>}></Route>
+                <Route path='/cart' element={<CartPage/>}></Route>
+                <Route path='/about' element={<AboutPage/>}></Route>
+                <Route path='/product/:name' element={<DynamicProduct/>}/>
+              </Routes>
+            </BrowserRouter>
+        </PersistGate> 
+
     </Provider>
   </StrictMode>,
 )

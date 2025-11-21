@@ -16,9 +16,11 @@
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
+    "react-persist": "^1.0.2",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.5",
     "react-router-hash-link": "^2.4.3",
+    "redux-persist": "^6.0.0",
     "sass": "^1.93.2"
   },
   "devDependencies": {
